@@ -1,1 +1,287 @@
 
+name: Update Live Repositories
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "0 */12 * * *"
+
+
+permissions:
+  contents: write
+
+
+jobs:
+
+  update-repositories:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
+
+
+      - name: Generate live repository section
+        env:
+          GH_USER: Daniel-Alex-R
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        run: |
+
+          python <<'PY'
+
+          import os
+          import json
+          import urllib.request
+          import urllib.parse
+          from pathlib import Path
+
+
+          USER = os.environ["GH_USER"]
+          TOKEN = os.environ.get("GH_TOKEN", "")
+
+          README = Path("README.md")
+
+
+          # -------------------------------------------------
+          # GitHub API
+          # -------------------------------------------------
+
+          url = (
+              f"https://api.github.com/users/{USER}/repos"
+              "?per_page=100"
+              "&sort=updated"
+              "&direction=desc"
+              "&type=owner"
+          )
+
+
+          headers = {
+              "Accept": "application/vnd.github+json",
+              "User-Agent": "GitHub-Profile-README"
+          }
+
+
+          if TOKEN:
+              headers["Authorization"] = f"Bearer {TOKEN}"
+
+
+          request = urllib.request.Request(
+              url,
+              headers=headers
+          )
+
+
+          with urllib.request.urlopen(request) as response:
+              repos = json.load(response)
+
+
+          # -------------------------------------------------
+          # FILTER REPOSITORIES
+          # -------------------------------------------------
+
+          repos = [
+
+              repo
+
+              for repo in repos
+
+              if not repo.get("fork", False)
+
+              and not repo.get("archived", False)
+
+              and repo["name"].lower() != USER.lower()
+
+          ]
+
+
+          # Show latest 6 repositories
+          repos = repos[:6]
+
+
+          # -------------------------------------------------
+          # CREATE README CONTENT
+          # -------------------------------------------------
+
+          output = []
+
+
+          if repos:
+
+              output.append('<div align="center">')
+              output.append("")
+
+
+              for repo in repos:
+
+                  repo_name = repo["name"]
+
+                  encoded_repo = urllib.parse.quote(
+                      repo_name,
+                      safe=""
+                  )
+
+
+                  repo_url = repo["html_url"]
+
+
+                  card_url = (
+
+                      "https://github-readme-stats.vercel.app/api/pin/"
+
+                      f"?username={USER}"
+
+                      f"&repo={encoded_repo}"
+
+                      "&hide_border=true"
+
+                      "&bg_color=00000000"
+
+                      "&title_color=00E5FF"
+
+                      "&text_color=C9D1D9"
+
+                      "&icon_color=00E5FF"
+
+                  )
+
+
+                  output.append(
+                      f'<a href="{repo_url}">'
+                  )
+
+                  output.append(
+                      f'<img width="48%" src="{card_url}" />'
+                  )
+
+                  output.append(
+                      '</a>'
+                  )
+
+                  output.append("")
+
+
+              output.append("</div>")
+
+
+          else:
+
+              output.append(
+                  '<p align="center">'
+              )
+
+              output.append(
+                  '<i>No public repositories yet. '
+                  'New repositories will appear here automatically.</i>'
+              )
+
+              output.append(
+                  '</p>'
+              )
+
+
+          generated_content = "\n".join(output)
+
+
+          # -------------------------------------------------
+          # FIND README MARKERS
+          # -------------------------------------------------
+
+          text = README.read_text(
+              encoding="utf-8"
+          )
+
+
+          start_marker = "<!-- LIVE-REPOS:START -->"
+
+          end_marker = "<!-- LIVE-REPOS:END -->"
+
+
+          if start_marker not in text:
+              raise SystemExit(
+                  "LIVE-REPOS:START marker not found."
+              )
+
+
+          if end_marker not in text:
+              raise SystemExit(
+                  "LIVE-REPOS:END marker not found."
+              )
+
+
+          before = text.split(
+              start_marker,
+              1
+          )[0]
+
+
+          after = text.split(
+              end_marker,
+              1
+          )[1]
+
+
+          new_readme = (
+
+              before
+
+              + start_marker
+
+              + "\n\n"
+
+              + generated_content
+
+              + "\n\n"
+
+              + end_marker
+
+              + after
+
+          )
+
+
+          README.write_text(
+              new_readme,
+              encoding="utf-8"
+          )
+
+
+          print(
+              f"Updated profile with "
+              f"{len(repos)} repositories."
+          )
+
+
+          PY
+
+
+      - name: Commit README update
+
+        run: |
+
+          git config \
+          user.name "github-actions[bot]"
+
+          git config \
+          user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+
+          git add README.md
+
+
+          if git diff --cached --quiet
+          then
+
+            echo "No repository changes."
+
+          else
+
+            git commit \
+            -m "Update live repositories"
+
+            git push
+
+          fi
