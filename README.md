@@ -145,11 +145,7 @@
 <div align="center">
   <h3>📬 Connect with Me</h3>
   <p align="center">
-    <a href="https://github.com/Daniel-Alex-R">
-      <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-    </a>
-    &nbsp;&nbsp;
-    <a href="https://linkedin.com">
+    <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME_HERE">
       <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
     </a>
   </p>
