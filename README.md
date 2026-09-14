@@ -145,7 +145,7 @@
 <div align="center">
   <h3>📬 Connect with Me</h3>
   <p align="center">
-    <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME_HERE">
+    <a href="https://www.linkedin.com/in/daniel-alex-r/">
       <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
     </a>
   </p>
