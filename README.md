@@ -130,16 +130,30 @@
 <br/>
 
 <!-- GITHUB STATS ANALYTICS -->
-<h2 align="center">📊 GitHub Analytics</h2>
+<h2 align="center">
+  🔥 DAILY GITHUB STREAK
+</h2>
 
 <p align="center">
   <img
-    src="https://streak-stats.demolab.com?user=Daniel-Alex-R&theme=dark&hide_border=false&background=0F172A&stroke=334155&ring=00E5FF&fire=00E5FF&currStreakLabel=00E5FF"
-    alt="GitHub Streak"
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=15&amp;duration=2000&amp;pause=650&amp;color=00E5FF&amp;center=true&amp;vCenter=true&amp;width=700&amp;height=35&amp;lines=%3E+Checking+daily+contributions...;%3E+Tracking+GitHub+streak...;%3E+Keep+building+every+day+%F0%9F%94%A5"
+    alt="Daily GitHub Streak Animation"
   />
 </p>
 
-<br/>
+<p align="center">
+  <img
+    width="70%"
+    src="https://streak-stats.demolab.com?user=Daniel-Alex-R&amp;hide_border=true&amp;background=0D1117&amp;stroke=334155&amp;ring=00E5FF&amp;fire=FF6B00&amp;currStreakNum=FFFFFF&amp;sideNums=FFFFFF&amp;currStreakLabel=00E5FF&amp;sideLabels=94A3B8&amp;dates=64748B"
+    alt="Daniel Alex Daily GitHub Streak"
+  />
+</p>
+
+<p align="center">
+  <sub>
+    🔥 Current Streak • 📅 Daily Contributions • ⚡ Keep Building
+  </sub>
+</p>
 
 <!-- FOOTER & CONNECT -->
 <div align="center">
