@@ -155,89 +155,54 @@
   </sub>
 </p>
 
-<!-- FOOTER & CONNECT -->
 <!-- ========================================================= -->
-<!--                        CONTACT                             -->
+<!--                    CONNECT WITH ME                         -->
 <!-- ========================================================= -->
 
-<h2 align="center">
-  📬 CONNECT WITH ME
-</h2>
+<h2 align="center">📬 CONNECT WITH ME</h2>
 
 <p align="center">
   <img
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=16&amp;duration=2000&amp;pause=650&amp;color=00E5FF&amp;center=true&amp;vCenter=true&amp;width=760&amp;height=40&amp;lines=%3E+Communication+channels+online...;%3E+LinkedIn+%7C+Instagram+%7C+Gmail;%3E+Let's+connect+%F0%9F%A4%9D"
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=16&amp;duration=2000&amp;pause=650&amp;color=00E5FF&amp;center=true&amp;vCenter=true&amp;width=700&amp;height=40&amp;lines=%3E+LinkedIn+%7C+Instagram+%7C+Gmail;%3E+Let's+connect+%F0%9F%A4%9D"
     alt="Contact Animation"
   />
 </p>
 
-<p align="center">
+<br>
 
-  <!-- LINKEDIN -->
-  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME/">
-    <img
-      src="https://img.shields.io/badge/LinkedIn-CONNECT-0A66C2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white"
-      alt="Daniel Alex LinkedIn"
-    />
-  </a>
-
-  &nbsp;&nbsp;
-
-  <!-- INSTAGRAM -->
-  <a href="https://www.instagram.com/YOUR-INSTAGRAM-USERNAME/">
-    <img
-      src="https://img.shields.io/badge/Instagram-FOLLOW-E4405F?style=for-the-badge&amp;logo=instagram&amp;logoColor=white"
-      alt="Daniel Alex Instagram"
-    />
-  </a>
-
-</p>
-
-<p align="center">
-
-  <!-- GMAIL -->
-  <a href="mailto:danielalex246810@gmail.com">
-    <img
-      src="https://img.shields.io/badge/Gmail-danielalex246810%40gmail.com-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white"
-      alt="Daniel Alex Gmail"
-    />
-  </a>
-
-</p>
+<table align="center" width="80%">
+  <tbody>
+    <tr>
+      <td align="center" width="33%">
+        <a href="https://www.linkedin.com/in/daniel-alex-r/">
+          <img
+            src="https://img.shields.io/badge/LinkedIn-CONNECT-0A66C2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white"
+            alt="LinkedIn"
+          />
+        </a>
+      </td>
+      <td align="center" width="33%">
+        <a href="https://www.instagram.com/YOUR-INSTAGRAM-USERNAME/">
+          <img
+            src="https://img.shields.io/badge/Instagram-FOLLOW-E4405F?style=for-the-badge&amp;logo=instagram&amp;logoColor=white"
+            alt="Instagram"
+          />
+        </a>
+      </td>
+      <td align="center" width="33%">
+        <a href="mailto:danielalex246810@gmail.com">
+          <img
+            src="https://img.shields.io/badge/Gmail-EMAIL%20ME-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white"
+            alt="Gmail"
+          />
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
-<table align="center">
-
-<tr>
-
-<td align="center">
-
-### 🔗 LinkedIn
-
-Professional networking,  
-career updates & technical journey.
-
-</td>
-
-<td align="right">
-
-### 📸 Instagram
-
-Creative content,  
-updates & social posts.
-
-</td>
-
-<td align="center">
-
-### 📧 Gmail
-
-For professional  
-or project-related contact.
-
-</td>
-
-</tr>
-
-</table>
+<p align="center">
+  <b>🤝 Feel free to connect with me anytime.</b>
+</p>
