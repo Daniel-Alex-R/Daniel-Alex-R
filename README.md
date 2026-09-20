@@ -220,7 +220,7 @@ career updates & technical journey.
 
 </td>
 
-<td align="center">
+<td align="right">
 
 ### 📸 Instagram
 
